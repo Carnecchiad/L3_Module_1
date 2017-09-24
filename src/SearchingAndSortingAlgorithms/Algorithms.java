@@ -4,8 +4,53 @@ import java.util.List;
 
 public class Algorithms {
 	public static int findBrokenEgg(List<String> eggs) {
-		return 0; //<- this needs changing
+		for (int i = 0; i < eggs.size(); i++) {
+			if (eggs.get(i).equals("cracked")) {
+				return i;
+			}
+
+		}
+		 return 0;
 	}
-	
-	//Add other methods here
+	public static int countPearls(List<Boolean> oysters) {
+		int amount = 0;
+		for (int i = 0; i < oysters.size(); i++) {
+			if(oysters.get(i) == true) {
+				amount++;
+			}
+		}
+		return amount;
+	}
+	public static double findTallest(List<Double> peeps) {
+		double tallest = 0;
+		for (int i = 0; i < peeps.size(); i++) {
+			if(peeps.get(i) > tallest) {
+				tallest = peeps.get(i);
+			}
+		}
+		return tallest;
+	}
+	public static String findLongestWord(List<String> words) {
+		int longest = 0;
+		for (int i = 0; i < words.size(); i++) {
+			if(words.get(i).length() > words.get(longest).length()) {
+				longest = i;
+			}
+		}
+		return words.get(longest);
+	}
+	public static boolean containsSOS(List<String> message) {
+		for (int i = 0; i < message.size(); i++) {
+			if(message.get(i).contains("... --- ...")) {
+				return true;
+			}
+		}
+		return false;
+		
+	}
+	public static double sortScores(List<Double> results) {
+		
+	}
+	}
+	// Add other methods here
 }
